@@ -1,0 +1,57 @@
+
+
+#login-path-principal-component{
+    width: 100%;
+    background-color: var(--background-color);
+    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    min-width: 300px;
+}
+/* Hide scrollbar for Chrome, Safari, and Opera */
+#login-path-principal-component::-webkit-scrollbar {
+    display: none; 
+}
+
+#login-path-principal-component {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+@media (max-width: 600px) {
+    #login-form-principal-container{
+        width: 100%;
+    }
+    .slideshow-container{
+        display: none;
+    }
+    #login-header-about-button-container{
+        display: none;
+    }
+    #login-submit-button{
+        width: 150px;
+        height: 40px;
+
+    }
+}
+@media (min-width : 601px) and (max-width: 768px) {
+    /* #login-form-principal-container{
+        width: 45%;
+    }
+    .slideshow-container{
+        width: 55%;
+    } */
+    #login-form-principal-container{
+        width: 100%;
+    }
+    .slideshow-container{
+        display: none;
+    }
+    #login-submit-button{
+        width: 175px;
+        height: 45px;
+
+    }
+}

@@ -1,0 +1,10 @@
+#admin-question-paper-create-main-container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: rgb(255, 170, 170);
+    min-height: 100vh;
+    padding-top: 10vh;
+    width: 100%;
+}

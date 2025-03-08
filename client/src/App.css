@@ -1,0 +1,28 @@
+*{
+  user-select: none;
+
+}
+
+.App {
+  text-align: center;
+}
+button{
+  cursor:pointer;
+}
+:root{
+  --background-color:#ffffff;
+  --text-color: #000000;;
+  --button-color:#0066ff;
+  --button-focus-color : #055bdc;
+  --font : Inter, sans-serif;
+
+}
+input[type="submit"]{
+  cursor:pointer;
+
+}
+
+input:-webkit-autofill {
+  background-color: white !important;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
