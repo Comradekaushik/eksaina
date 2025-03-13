@@ -8,12 +8,14 @@ import Login from "./components/login/Login";
 import Signup from "./components/Signup/Signup";
 import Question from "./components/admin/Question";
 import AdminQuestionPaperCreate from "./components/admin/AdminQuestionPaperCreate";
+import Requirements from "./components/Requirements";
+import AdminMain from "./components/admin/AdminMain";
 // import Signup from "./components/login/Signup";
 // import AdminMain from "./components/admin/AdminMain";
 // import EntryHeader from "./components/common/entry/EntryHeader";
 
 function App() {
-  console.log("Rendered");
+  // console.log("Rendered");
   const [isAuthorized, setIsAuthorized] = useState(null);
   // localStorage.getItem("isAuthorized") && localStorage.getItem("isAuthorized") === 1 ? 1 : 0
   
@@ -89,7 +91,8 @@ function App() {
           
           </Route>
           <Route path='/signup' element={<Signup/>}></Route>
-          <Route path='/create-question-paper' element={<AdminQuestionPaperCreate/>}></Route>
+          <Route path='/create-question-paper' element={<AdminMain/>}></Route>
+          <Route path='/requirements' element={<Requirements/>}></Route>
           
 
       </Routes>

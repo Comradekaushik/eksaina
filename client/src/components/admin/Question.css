@@ -4,6 +4,9 @@
 .question-paper-header-main-container{
     width: 60%;
     background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 .question-paper-header-title{
@@ -15,4 +18,60 @@
 }
 .question-edit-main-container{
     width: 60%;
+}
+.question-edit-top-section{
+    width: 100%;
+    background-color: aquamarine;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+}
+.question-edit-top-section-right{
+
+    width: 65%;
+    /* min-width: 65%; */
+    background-color: rgb(40, 40, 141);
+}
+.question-edit-question-text-content{
+    width: 100%;
+    background-color: black;
+    height: auto;
+    max-height: 100%;
+    overflow: auto;
+    color: white;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    line-break: auto;
+    /* text-overflow: clip; */
+}
+.question-edit-question-image-input-container{
+    width: 100%;
+}
+.add-option-button-container{
+    width: 100%;
+    background-color: blueviolet;
+}
+.question-option{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    height: auto;
+    align-items: center;
+    background-color: crimson;
+    
+}
+.option-content-editable-portion{
+    overflow: auto;
+    color: white;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    line-break: auto;
+    text-align: left;
+
+}
+.option-remove-btn{
+    margin-right: 15px;
+    margin-left: auto;
 }

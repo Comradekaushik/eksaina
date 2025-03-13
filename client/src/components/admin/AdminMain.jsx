@@ -1,12 +1,16 @@
-import React from 'react'
+import React from "react";
+import AdminQuestionPaperCreate from "./AdminQuestionPaperCreate";
+
 
 export default function AdminMain() {
+  
+
+  
+
   return (
-    <div>
-        AdminMain
-
-
-
-    </div>
-  )
+    <>
+    <AdminQuestionPaperCreate/>
+      
+    </>
+  );
 }
