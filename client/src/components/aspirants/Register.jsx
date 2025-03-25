@@ -3,7 +3,7 @@ import "./register.css";
 
 function Register(props) {
 
-  let props2 = [{instructiontext: "instruction",},{},{},{},{},]
+  // let props2 = [{instructiontext: "instruction",},{},{},{},{},]
   return (
     <div className="register-exam-main-container"> 
       <div>

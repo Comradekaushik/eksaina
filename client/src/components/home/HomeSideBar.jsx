@@ -9,7 +9,7 @@ import settingsicon from "../../assets/images/settings-svgrepo-com.svg";
 import notificationicon from "../../assets/images/notification.svg";
 import adminicon from "../../assets/images/administrator-svgrepo-com.svg";
 
-export default function HomeSideBar(props) {
+export default function HomeSideBar() {
   return (
     <div className="home-sidebar-main-container">
       <Link to="/home" className="home-sidebar-logo-link">
@@ -19,7 +19,7 @@ export default function HomeSideBar(props) {
       <div className="sidebar-menu-items-container">
         <Link to="/home" className="sidebar-menu-item-link">
           <div className="sidebar-menu-item">
-            <img className="sidebar-menu-icons-svg-imgs" src={homeicon} />
+            <img className="sidebar-menu-icons-svg-imgs" src={homeicon} alt="icon" />
             Dashboard
           </div>
         </Link>
@@ -27,26 +27,26 @@ export default function HomeSideBar(props) {
         <Link to="/exams" className="sidebar-menu-item-link">
           {" "}
           <div className="sidebar-menu-item">
-            <img className="sidebar-menu-icons-svg-imgs" src={stacksvg} />
+            <img className="sidebar-menu-icons-svg-imgs" src={stacksvg} alt="icon" />
             Exams
           </div>
         </Link>
         <Link to="/reports" className="sidebar-menu-item-link">
           {" "}
           <div className="sidebar-menu-item">
-            <img className="sidebar-menu-icons-svg-imgs" src={piechart} />
+            <img className="sidebar-menu-icons-svg-imgs" src={piechart} alt="icon" />
             Reports
           </div>
         </Link>
         <Link to="/admin" className="sidebar-menu-item-link">
           <div className="sidebar-menu-item">
-            <img className="sidebar-menu-icons-svg-imgs" src={adminicon} />
+            <img className="sidebar-menu-icons-svg-imgs" src={adminicon} alt="icon" />
             Admin
           </div>
         </Link>
         <Link to="/support" className="sidebar-menu-item-link">
           <div className="sidebar-menu-item">
-            <img className="sidebar-menu-icons-svg-imgs" src={supporticon} />
+            <img className="sidebar-menu-icons-svg-imgs" src={supporticon} alt="icon" />
             Support
           </div>
         </Link>
@@ -55,13 +55,14 @@ export default function HomeSideBar(props) {
             <img
               className="sidebar-menu-icons-svg-imgs"
               src={notificationicon}
+              alt="icon"
             />
             Notifications
           </div>
         </Link>
         <Link to="/settings" className="sidebar-menu-item-link">
           <div className="sidebar-menu-item">
-            <img className="sidebar-menu-icons-svg-imgs" src={settingsicon} />
+            <img className="sidebar-menu-icons-svg-imgs" src={settingsicon} alt="icon" />
             Settings
           </div>
         </Link>
@@ -74,6 +75,7 @@ export default function HomeSideBar(props) {
               <img
                 className="sidebar-profile-image"
                 src={require("../../assets/images/grave-soviet-dictator-josef-stalin-red-square-moscow-russia_769373-4636.jpg")}
+                alt="not-found"
               />
             </div>
             <div className="sidebar-myprofile-info">

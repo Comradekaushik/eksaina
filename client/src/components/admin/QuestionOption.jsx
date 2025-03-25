@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Question.css";
 // import { useEffect } from "react";
 
@@ -26,7 +26,7 @@ function QuestionOption(props) {
           type="radio"
           name={props.questionKey}
           value={props.optionKey}
-          onChange={(event) => {
+          onChange={() => {
             props.updateQuestionAnswer(props.questionKey, props.optionKey);
           }}
         />

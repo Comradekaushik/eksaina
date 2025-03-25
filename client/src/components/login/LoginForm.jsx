@@ -90,11 +90,11 @@ function LoginForm() {
     <div id="login-form-principal-container">
       <div id="login-form-logo-container">
         <div id="login-form-logo-image-container">
-          <img
+          {/* <img
             id="login-form-logo-image"
             src={require("../../assets/images/eksaina-test-logo.png")}
             alt="logo-login"
-          />
+          /> */}
         </div>
         <div id="login-heading">Sign in to Eksaina</div>
         <div id="enter-credentials-message-container">

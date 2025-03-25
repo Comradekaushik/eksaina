@@ -10,10 +10,10 @@ function LoginLeftSlideshow({slides}) {
     const nextIndex = (currentIndex + 1) % slides.length;
     setCurrentIndex(nextIndex);
   };
-  const goToPreviousSlide = () => {
-    const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-    setCurrentIndex(prevIndex);
-  };
+  // const goToPreviousSlide = () => {
+  //   const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+  //   setCurrentIndex(prevIndex);
+  // };
   // console.log(slides); //@comradekaushik to see whether the slides are rendering
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function LoginLeftSlideshow({slides}) {
     }, 5000); //  @comradekaushik to change slide every 5 seconds
 
     return () => clearInterval(timer);
-  }, [currentIndex]);
+  }, [goToNextSlide]); /*previously [currentIndex,goToNextSlide]*/
 
   return (
     <>
@@ -41,7 +41,7 @@ function LoginLeftSlideshow({slides}) {
           key={index}
           className={`slide ${index === currentIndex ? 'active' : ''}`}
         >
-            <img className="slide-image" src={slide} alt="no image found"/>
+            <img className="slide-image" src={slide} alt="not found"/>
         </div>
 
         
