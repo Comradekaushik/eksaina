@@ -7,6 +7,7 @@ import supporticon from "../../assets/images/support-svgrepo-com.svg";
 import homeicon from "../../assets/images/home-1-svgrepo-com.svg";
 import settingsicon from "../../assets/images/settings-svgrepo-com.svg";
 import notificationicon from "../../assets/images/notification.svg";
+import adminicon from "../../assets/images/administrator-svgrepo-com.svg";
 
 export default function HomeSideBar(props) {
   return (
@@ -35,6 +36,12 @@ export default function HomeSideBar(props) {
           <div className="sidebar-menu-item">
             <img className="sidebar-menu-icons-svg-imgs" src={piechart} />
             Reports
+          </div>
+        </Link>
+        <Link to="/admin" className="sidebar-menu-item-link">
+          <div className="sidebar-menu-item">
+            <img className="sidebar-menu-icons-svg-imgs" src={adminicon} />
+            Admin
           </div>
         </Link>
         <Link to="/support" className="sidebar-menu-item-link">

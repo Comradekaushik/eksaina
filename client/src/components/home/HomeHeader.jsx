@@ -37,7 +37,9 @@ export default function HomeHeader() {
         </div>
         <div>{/* calendar */}</div>
         <div className="header-start-test-button-container">
-          <button className="header-start-test-button">Start Test</button>
+          <button className="header-start-test-button" onClick={()=>{
+            navigate("/test/appear");
+          }}>Start Test</button>
         </div>
       </div>
     </div>

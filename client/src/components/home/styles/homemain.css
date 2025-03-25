@@ -1,13 +1,84 @@
-.homemain-main-container{
-    min-height: 100vh;
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
+.homemain-main-container {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
 
-    /* background-color: black; */
-    /* background-color: #0033FF; */
-    /* color: aliceblue; */
-    
+  /* background-color: black; */
+  /* background-color: #0033FF; */
+  /* color: aliceblue; */
+}
+.homemain-section1-upcoming-tests {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50vh;
+  min-height: 325px;
+}
+.homemain-section1-upcoming-tests-header {
+  height: 20vh;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 30px;
+  padding-right: 30px;
+  align-items: center;
+  font-weight: 475;
+}
+.homemain-section1-view-all-button-container {
+  margin-left: auto;
+}
+.homemain-section1-upcoming-tests-flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.homemain-section2-all-tests {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50vh;
+  min-height: 325px;
+}
+.homemain-section2-all-tests-header {
+  height: 20vh;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 30px;
+  padding-right: 30px;
+  align-items: center;
+  font-weight: 450;
+}
+.homemain-section2-view-all-button-container {
+  margin-left: auto;
+}
+.home-main-sections-view-all-btn {
+  /* background-color: var(--button-color); */
+  background-color:  #ff005d;
+  color: white;
+  border-style: solid;
+  /* border-color: var(--button-color); */
+  border-color: #ff005d;
+  width: auto;
+  height: 30px;
+  border-radius: 5px;
+  font-size: medium;
+  font-weight: 500;
+}
+.homemain-section2-all-tests-flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
 }

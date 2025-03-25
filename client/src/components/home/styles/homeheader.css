@@ -15,27 +15,25 @@
   padding-left: 20px;
   padding-right: 20px;
   justify-content: right;
-  
 }
-.header-buttons-container{
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    align-items: center;
+.header-buttons-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
 }
-.header-notification-button-container{
-    margin-left: auto;
-    margin-right: 20px;
-
+.header-notification-button-container {
+  margin-left: auto;
+  margin-right: 20px;
 }
 .header-notification-button {
   background-color: transparent;
   border-style: none;
 }
 
-.header-start-test-button-container{
-    /* margin-right: 20px; */
-    margin-left: auto;
+.header-start-test-button-container {
+  /* margin-right: 20px; */
+  margin-left: auto;
 }
 
 .header-start-test-button {
