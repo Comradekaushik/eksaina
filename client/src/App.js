@@ -10,6 +10,8 @@ import Question from "./components/admin/Question";
 import AdminQuestionPaperCreate from "./components/admin/AdminQuestionPaperCreate";
 import Requirements from "./components/Requirements";
 import AdminMain from "./components/admin/AdminMain";
+import Register from "./components/aspirants/Register";
+import Home from "./components/home/Home";
 // import Signup from "./components/login/Signup";
 // import AdminMain from "./components/admin/AdminMain";
 // import EntryHeader from "./components/common/entry/EntryHeader";
@@ -93,6 +95,8 @@ function App() {
           <Route path='/signup' element={<Signup/>}></Route>
           <Route path='/create-question-paper' element={<AdminMain/>}></Route>
           <Route path='/requirements' element={<Requirements/>}></Route>
+          <Route path='/register' element={<Register/>}></Route>
+          <Route path='/home' element={<Home/>}></Route>
           
 
       </Routes>

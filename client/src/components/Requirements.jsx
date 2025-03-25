@@ -107,7 +107,14 @@ function Requirements() {
       Compatibility & Responsive UI Ensure exams work smoothly on mobile,
       tablet, and desktop. Frontend: Use Material-UI or CSS for responsive
       design.</li>
+
+      <li>
+        <a href="https://medium.com/@vijayrajhonnur/online-examination-system-ux-case-study-4411faae440d"></a>
+      </li>
       </ol>
+
+
+
         
     </div>
     

@@ -1,0 +1,175 @@
+.home-sidebar-main-container {
+  width: 220px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgb(10, 10, 38);
+
+  padding-left: 12px;
+  padding-right: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.home-sidebar-logo-link {
+  width: 100%;
+  text-decoration: none;
+  /* color: #0066ff; */
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 30px;
+  /* margin-right: 10px; */
+  /* background-color: #999b9d; */
+}
+.home-sidebar-logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Times New Roman", Times, serif;
+
+  color: #ffffff;
+  letter-spacing: 4px;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  /* background-color: #adb0be; */
+  /* background-color: #6b75974d; */
+}
+.sidebar-menu-items-container {
+  max-height: 60vh;
+  color: white;
+  overflow-y: auto;
+  padding-right: 5px;
+  /* background-color: blanchedalmond; */
+}
+
+/* The entire scrollbar */
+.sidebar-menu-items-container::-webkit-scrollbar {
+  width: 2px; /* Width of the scrollbar */
+  background-color: #adb0be; /* Background color of the scrollbar */
+  background-color: transparent;
+}
+
+/* The scrollbar handle (thumb) */
+.sidebar-menu-items-container::-webkit-scrollbar-thumb {
+  background-color: #adb0be; /* Color of the scrollbar thumb */
+  /* border-radius: 6px; */
+}
+
+/* The track of the scrollbar */
+.sidebar-menu-items-container::-webkit-scrollbar-track {
+  background-color: transparent; /* Color of the scrollbar track */
+  /* border-radius: 6px; */
+}
+
+/* Hover effect on the scrollbar thumb */
+.sidebar-menu-items-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--button-color);
+}
+
+.sidebar-menu-item-link {
+  text-decoration: none;
+  color: #adb0be;
+  /* margin-right: 5px; */
+}
+.sidebar-menu-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 15px;
+  height: 45px;
+  padding-left: 8px;
+  cursor: pointer;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 6px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+}
+.sidebar-menu-item:hover {
+  background-color: #6b75974d;
+  transition: 0.25s;
+}
+.sidebar-menu-icons-svg-imgs {
+  height: 25px;
+  margin-right: 16px;
+}
+
+.bottom-section-sidebar {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  padding-top: 30px;
+
+  /* align-items: center; */
+  /* margin-bottom: 30px; */
+  margin-top: auto;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #adb0be;
+  /* box-shadow: 0 -2px 6px rgba(173, 176, 190, 0.2); */
+}
+.myprofile-container-link {
+  text-decoration: none;
+  color: transparent;
+  width: 100%;
+}
+
+.myprofile-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.myprofile-img-container {
+  height: 35px;
+  width: 35px;
+  border-style: solid;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.sidebar-profile-image {
+  height: 100%;
+  border-radius: 50%; /*ensure that this image is a square*/
+}
+
+.sidebar-myprofile-info {
+  /* background-color: aquamarine; */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* width: calc(100%-35px); */
+  color: white;
+  padding-left: 10px;
+}
+.sidebar-profile-name-container {
+  width: 150px;
+  /* max-width: 100%; */
+  /* display: flex; */
+  /* justify-content: start; */
+  font-size: 16px;
+  overflow: hidden; /* Prevents the content from overflowing */
+  text-overflow: ellipsis; /* Displays '...' for overflowing text */
+  white-space: nowrap; /* Ensures the text stays on a single line */
+  text-align: start;
+  letter-spacing: 0.5px;
+}
+.sidebar-profile-email-container {
+  width: 150px;
+  /* max-width: 100%; */
+  /* display: flex; */
+  /* justify-content: start; */
+  font-size: 12px;
+  overflow: hidden; /* Prevents the content from overflowing */
+  text-overflow: ellipsis; /* Displays '...' for overflowing text */
+  white-space: nowrap; /* Ensures the text stays on a single line */
+  text-align: start;
+  font-weight: 600;
+  letter-spacing: 1px;
+}

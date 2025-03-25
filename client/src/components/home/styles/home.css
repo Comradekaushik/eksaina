@@ -1,3 +1,11 @@
+.home-principal{
+    padding-top: 70px; /*responsive*/
+    padding-left: 220px; /*responsive*/
+    width: 100%;
+    
+}
+
+
 .eksaina-logo{
     font-family: 'Times New Roman',Times,serif;
     color: #000000;
@@ -12,4 +20,13 @@
 }
 #p123{
     color: red;
+}
+
+
+
+@media (max-width: 600px) {
+    
+}
+@media (min-width : 601px) and (max-width: 768px) {
+    
 }
