@@ -17,7 +17,7 @@ function Question(props) {
     console.log("Updated myoptions:", myoptions);
     props.updateQuestionOptions(props.questionKey, myoptions);
 
-  }, [myoptions]);
+  }, [myoptions,props]);
 
   const uniqueKeyCreator2 = (optionsarr) => {
     let mydate = Date.now().toString();

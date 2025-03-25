@@ -1,15 +1,24 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import "./LoginLeftslide.css";
 
 function LoginLeftSlideshow({slides}) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const goToNextSlide = () => {
+  // const goToNextSlide = () => {
+  //   const nextIndex = (currentIndex + 1) % slides.length;
+  //   setCurrentIndex(nextIndex);
+  // };
+
+  const goToNextSlide = useCallback(() => {
     const nextIndex = (currentIndex + 1) % slides.length;
     setCurrentIndex(nextIndex);
-  };
+  }, [currentIndex, slides.length]);
+
+
+
+
   // const goToPreviousSlide = () => {
   //   const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
   //   setCurrentIndex(prevIndex);
