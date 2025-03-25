@@ -72,12 +72,12 @@ export default function HomeSideBar(props) {
             <div className="sidebar-myprofile-info">
               <div className="sidebar-profile-name-container">
                 {/*myprofile-name*/}
-                {props.name || "My name"}
+                {localStorage.getItem("name") || "My name"}
               </div>
               <div className="sidebar-profile-email-container">
                 {/*myprofile-email */}
 
-                {props.email || "nonamek448.be34@email.com"}
+                {localStorage.getItem("email") || "nonamek448.be34@email.com"}
               </div>
             </div>
           </div>

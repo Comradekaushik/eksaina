@@ -8,6 +8,11 @@ import "./Login.css";
 
 function Login() {
   const navigate = useNavigate();
+
+  const isAuthenticated = !!localStorage.getItem("token");
+  if(isAuthenticated){
+    navigate("/home");
+  }
   
   const myobj = {
     slides : [ //slides images URL

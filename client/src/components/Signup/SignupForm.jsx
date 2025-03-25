@@ -4,21 +4,21 @@ import { useNavigate } from "react-router-dom";
 
 function SignupForm() {
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
+  const [nameuser, setName] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const handleChangeEmail = (event) => {
     setEmail(event.target.value);
   };
-  const handleChangeUsername = (event) => {
-    setUsername(event.target.value);
+  const handleChangeName = (event) => {
+    setName(event.target.value);
   };
   const handleChangePassword = (event) => {
     setPassword(event.target.value);
   };
   const handlesubmit = async (event) => {
     event.preventDefault();
-    if (!username || !email || !password) {
+    if (!nameuser || !email || !password) {
       alert("Please fill in all fields");
       return;
     }
@@ -30,12 +30,12 @@ function SignupForm() {
 
     const formData = {
       email: email,
-      username: username,
+      name: nameuser,
       password: password,
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:9090/users/add", {
+      const response = await fetch("http://127.0.0.1:9090/signup", {
         method: "POST",
         credentials: "include",
         headers: {
@@ -48,7 +48,7 @@ function SignupForm() {
 
       setPassword("");
       setEmail("");
-      setUsername("");
+      setName("");
       if (result.registered === "true") {
         localStorage.setItem("userid", result.userid);
 
@@ -93,15 +93,15 @@ function SignupForm() {
               htmlFor="signup-username-input"
               className="signup-input-label"
             >
-              Choose your username
+              Enter your name
             </label>
 
             <input
               type="text"
               id="signup-username-input"
               className="input-field"
-              onChange={handleChangeUsername}
-              value={username}
+              onChange={handleChangeName}
+              value={nameuser}
               autoComplete="off"
               required
             />

@@ -71,6 +71,25 @@ const port = 9090;
 const host = 'http://127.0.0.1:' + port;
 
 
+
+
+app.get("/auth",async (req,res)=>{
+    const token = req.header("Authorization")?.replace("Bearer ", "");
+    if (!token) {
+        return res.status(401).json({ message: "Access Denied" });
+    }
+
+    try {
+        const verified = jwt.verify(token, "your_jwt_secret_key");
+        req.user = verified; // Attach user info from token payload
+        next();
+    } catch (err) {
+        res.status(400).json({ message: "Invalid Token" });
+    }
+
+})
+
+
 const authenticate = (req, res, next) => {
     const token = req.header("Authorization")?.replace("Bearer ", "");
     if (!token) {
@@ -109,8 +128,7 @@ app.post("/signup", async (req, res, next) => {
         const hashedPassword = await bcrypt.hash(enteredpassword, salt);
         const data = 
             {
-                "firstname": req.body.firstname,
-                "lastname": req.body.lastname,
+                "name": req.body.name,
                 "userid": generateUserId(),
                 "email": req.body.email,
                 "password": hashedPassword,
@@ -144,14 +162,17 @@ app.post("/login",async(req,res)=>{
         
         const isPasswordValid = await bcrypt.compare(password, user.password);
         if (!isPasswordValid) {
-            return res.status(400).json({ message: "Invalid password", "login" : "failure"  });
+            return res.status(400).json({ "message": "Invalid password", "login" : "failure"  });
         }
 
         // Generate JWT token
-        const token = jwt.sign({ userid: user.userid }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "24h" });
+        const token = jwt.sign({ userid: user.userid, timestamp: new Date().getTime() }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "24h" });
+        
+        user.accesskey = token;
+        await user.save();
 
         // Respond with token
-        res.json({ "token" : token, "login" : "success" });
+        res.json({ "token" : token, "login" : "success","email" : email,"userid" : user.userid, "name": user.name  });
     } catch (err) {
         console.error("Login Error:", err);
         res.status(500).json({ message: "Internal Server Error" });
@@ -209,4 +230,6 @@ app.post("/image/upload", upload.single('image'), async (req, res) => {
 
     }
 })
+
+
 app.listen(port, () => console.log(`Server is running on port ${port} and host is ${host}`));

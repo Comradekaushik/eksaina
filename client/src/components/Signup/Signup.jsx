@@ -2,8 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SignupForm from "./SignupForm";
 import "./Signup.css";
+import { useNavigate } from 'react-router-dom';
 
 function Signup() {
+  const navigate = useNavigate();
+  const isAuthenticated = !!localStorage.getItem("token");
+  if(isAuthenticated){
+    navigate("/home");
+  }
   return (
     <div id="signup-form-principal-container">
       <div id="signup-form-box-container">
